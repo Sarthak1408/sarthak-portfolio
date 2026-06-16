@@ -2,30 +2,25 @@
 
 import {BsArrowDownRight} from 'react-icons/bs';
 import Link from 'next/link';
+import {easeIn, motion} from "framer-motion";
 
 const services = [{
     num: '01',
-    title: 'Web Development',
-    description: 'evgoiahbrouvhaihdvijbaoisegfuagie iwhevdfugw9uegv weivw8yevcih weihcv8wyevf',
+    title: 'Junior Developer',
+    company: 'Transitus - NexGen Innovative Solutions',
+    location: 'Bengaluru, India',
+    period: 'Aug 2025 – Present',
+    description: 'Engineered fault-tolerant execution pipelines reducing runtime failures by 80%. Build core backend services for Universal Oracle Application Connector, handling 10+ enterprise automation workflows. Delivered automated reporting microservices eliminating 12 hrs/week of manual monitoring.',
     href: ''
 }, {
-    num: '01',
-    title: 'Web Development',
-    description: 'evgoiahbrouvhaihdvijbaoisegfuagie iwhevdfugw9uegv weivw8yevcih weihcv8wyevf',
+    num: '02',
+    title: 'Software Engineer',
+    company: 'Maa Gyan Services',
+    location: 'Giridih, India',
+    period: 'June 2024 – May 2025',
+    description: 'Built responsive web applications in React.js, reducing page load time from 3.5s to 1.5s. Designed 15+ RESTful API endpoints in Node.js & Express.js. Optimized MongoDB schemas reducing query latency by 40%. Delivered 20+ features in 5-member Agile team with zero critical defects.',
     href: ''
-}, {
-    num: '01',
-    title: 'Web Development',
-    description: 'evgoiahbrouvhaihdvijbaoisegfuagie iwhevdfugw9uegv weivw8yevcih weihcv8wyevf',
-    href: ''
-}, {
-    num: '01',
-    title: 'Web Development',
-    description: 'evgoiahbrouvhaihdvijbaoisegfuagie iwhevdfugw9uegv weivw8yevcih weihcv8wyevf',
-    href: ''
-},]
-
-import {easeIn, motion} from "framer-motion";
+}, ]
 
 const Services = () => {
     return (<section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -46,6 +41,10 @@ const Services = () => {
                         </div>
                         {/*title*/}
                         <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
+                        {/*company*/}
+                        <p className="text-white/80 font-semibold">{service.company}</p>
+                        {/*location & period*/}
+                        <p className="text-white/60 text-sm">{service.location} | {service.period}</p>
                         {/*description*/}
                         <p className="text-white/60">{service.description}</p>
                         {/*border*/}
